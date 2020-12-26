@@ -5,7 +5,7 @@ enter.pack()
 from OScript import *
 def runbtn():
     entcmd = enter.get()
-    GUIRUN(entcmd)
+    main(entcmd)
 run = Button(root, text = "Run Script!", command = runbtn)
 run.pack()
 root.mainloop()
