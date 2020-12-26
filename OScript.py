@@ -1,4 +1,4 @@
-def main():
+def main(): 
     while True:
         command = input()
         if command.startswith('echo'):
@@ -11,7 +11,7 @@ def main():
             print("Commands include:\n *echo (arg) \\\returns any string inputted\n *help \\\lists all current commands")
 
 
-def GUIRUN(command):
+def GUIRUN(command): #the reason this one doesn't have a forever loop is because tkinter usually doesn't work with a loop, so I split it up into two.
     if command.startswith('echo'):
         # print(command) (used to check if string formatting was correct
         cmd = command.partition('echo ')[2]
@@ -21,7 +21,7 @@ def GUIRUN(command):
     if command.startswith('help') or command == "help" or command == "/?":
         print("Commands include:\n *echo (arg) \\\returns any string inputted\n *help \\\lists all current commands")
 
-if __name__ == "__main__":
+if __name__ == "__main__": #this splits up the code into two parts, if it's running from the UI program (as a module), then it uses GUIRUN, if you run this file, it uses the original one.
     main()
 
 '''
