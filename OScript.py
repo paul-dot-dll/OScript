@@ -3,7 +3,7 @@ cmdlist = {
     'help' : "print('''Commands include: \n *echo (arg) #returns any string inputted\n *help #lists all current commands''')",
 }
 
-#this simplifies the code even further, it looks into the dictionary, sees if 
+#this simplifies the code even further, it looks into the dictionary, sees if the command is in there, and if it is, it executes the command's code
 def main(command):
         for key in cmdlist:
                 if command.startswith(key):
